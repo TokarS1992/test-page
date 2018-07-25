@@ -1,0 +1,19 @@
+<h2>Templates table</h2>
+
+<table class="table">
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>Last modified:</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let template of templates">
+    <td>
+      <a [routerLink]="['/templates', template.id]">{{template.name}}</a>
+      <!--<span>{{template.name}} {{template.id}} </span>-->
+    </td>
+    <td>{{template.modified}}</td>
+  </tr>
+  </tbody>
+</table>

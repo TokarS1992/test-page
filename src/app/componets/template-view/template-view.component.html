@@ -1,0 +1,8 @@
+<h2>Template view</h2>
+<div class="container">
+    <form [formGroup]="form" (ngSubmit)="onSubmit(form.value)" class="form">
+        <div class="form-group" [ngClass]="{'has-error': (!content.valid && content.touched), 'has-success': (content.valid && content.touched)}">
+            <quill-editor [formControl]="content" [options]="editorConfig" (change)="onContentChanged($event)"></quill-editor>
+        </div>
+    </form>
+</div>
